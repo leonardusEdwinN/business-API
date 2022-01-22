@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1AF6DDDE-5A2A-4835-A979-ED9F063B8F95"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28E7A2E5-A901-4124-A68B-900AD82CF0C3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "business-app/Features/ListBusiness/ViewModel/ListBusinessViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "getBusinessFromKeyword(keyword:isNext:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "28E7A2E5-A901-4124-A68B-900AD82CF0C3 - db428f9aeaa6b63f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;) -&gt; () in business_app.ListBusinessViewModel.getBusinessFromKeyword(isNext: Swift.Bool, completion: (Swift.Array&lt;business_app.BusinessViewModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "business-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edwinniwarlangga/Apple%20Developer%20Academy/Online%20Test/business-API/business-app/business-app/Features/ListBusiness/ViewModel/ListBusinessViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "207">
+               </Location>
+               <Location
+                  uuid = "28E7A2E5-A901-4124-A68B-900AD82CF0C3 - db428f9aeaa6b63f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;) -&gt; () in business_app.ListBusinessViewModel.getBusinessFromKeyword(isNext: Swift.Bool, completion: (Swift.Array&lt;business_app.BusinessViewModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "business-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edwinniwarlangga/Apple%20Developer%20Academy/Online%20Test/business-API/business-app/business-app/Features/ListBusiness/ViewModel/ListBusinessViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "291">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95E22FB9-B19D-47F0-8609-04C38EDC50D5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "business-app/Features/ListBusiness/ViewModel/ListBusinessViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getBusinessFromKeyword(keyword:isNext:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D81434F8-8395-4444-AF74-23888FD8ED42"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "business-app/Features/ListBusiness/ViewModel/ListBusinessViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getBusinessFromKeyword(keyword:isNext:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

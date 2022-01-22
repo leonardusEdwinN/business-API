@@ -15,9 +15,35 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Npd-dq-aHS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HwF-S5-os3"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3AN-rP-znV">
+                                <rect key="frame" x="0.0" y="99" width="414" height="763"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3AN-rP-znV" secondAttribute="trailing" id="Btj-lv-yin"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Npd-dq-aHS" secondAttribute="trailing" id="LD1-iU-Hri"/>
+                            <constraint firstItem="Npd-dq-aHS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dNW-jj-KKz"/>
+                            <constraint firstItem="3AN-rP-znV" firstAttribute="top" secondItem="Npd-dq-aHS" secondAttribute="bottom" constant="5" id="eVL-9c-gau"/>
+                            <constraint firstItem="Npd-dq-aHS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="oYW-0Q-PhT"/>
+                            <constraint firstItem="3AN-rP-znV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="wfa-VE-6Ne"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="3AN-rP-znV" secondAttribute="bottom" id="xCC-Ye-UND"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="listBusinessTableView" destination="3AN-rP-znV" id="PbI-22-Qun"/>
+                        <outlet property="navigationView" destination="Npd-dq-aHS" id="PeK-g2-d1E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,8 +51,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
