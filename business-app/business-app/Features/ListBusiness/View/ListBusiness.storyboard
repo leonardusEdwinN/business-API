@@ -43,11 +43,22 @@
                     <connections>
                         <outlet property="listBusinessTableView" destination="3AN-rP-znV" id="PbI-22-Qun"/>
                         <outlet property="navigationView" destination="Npd-dq-aHS" id="PeK-g2-d1E"/>
+                        <segue destination="Z69-IF-vlx" kind="show" identifier="goToDetail" id="Csm-xs-8EZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="135"/>
+        </scene>
+        <!--BusinessDetailVC-->
+        <scene sceneID="j5K-Rk-16c">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BusinessDetail" referencedIdentifier="BusinessDetailVC" id="Z69-IF-vlx" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5mZ-Qz-AoL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="goD-8e-fSq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="-16"/>
         </scene>
     </scenes>
     <resources>

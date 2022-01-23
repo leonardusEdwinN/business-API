@@ -10,25 +10,16 @@ import Foundation
 struct Constants {
     
     struct Urls {
-        // MARK: Source
-        static func urlForGetSourceFromCategory(category : String, pageSize : Int, page: Int) -> URL {
-            return URL(string: "https://newsapi.org/v2/top-headlines/sources?apiKey=\(Constants.API_KEYS)&category=\(category.escaped())")!
-        }
-        
-        
-        // MARK: ARTICLES
-        static func urlForGetNewsFromSourceName(sourceKeyword: String, pageSize : Int, page: Int) -> URL {
-//            print("https://newsapi.org/v2/top-headlines?sources=\(sourceKeyword.escaped())&apiKey=\(Constants.API_KEYS)&page=\(page)&pageSize=\(pageSize)")
-            return URL(string: "https://newsapi.org/v2/top-headlines?sources=\(sourceKeyword.escaped())&apiKey=\(Constants.API_KEYS)&page=\(page)&pageSize=\(pageSize)")!
-        }
-        
-        static func urlForGetNewsFromKeyword(keyword: String, pageSize : Int, page: Int) -> URL {
-            return URL(string: "https://newsapi.org/v2/top-headlines?apiKey=\(Constants.API_KEYS)&q=\(keyword.escaped())&pageSize=\(pageSize)&page=\(page)")!
-        }
         
         static func urlForSearchLocation(keyword: String) -> URL {
             print("URL = https://api.yelp.com/v3/businesses/search?location=\(keyword)")
             return URL(string: "https://api.yelp.com/v3/businesses/search?location=\(keyword)")!
+        }
+        
+        static func urlForGetID(id: String) -> URL {
+            print("URL = https://api.yelp.com/v3/businesses/\(id)")
+            
+            return URL(string: "https://api.yelp.com/v3/businesses/\(id)")!
         }
         
     }

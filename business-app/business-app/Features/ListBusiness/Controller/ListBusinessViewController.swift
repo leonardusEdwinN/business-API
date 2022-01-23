@@ -14,6 +14,8 @@ class ListBusinessViewController : UIViewController{
     
     // MARK: Variable
     var listBusinessVM = ListBusinessViewModel()
+    var selectedIndex : Int = 0
+    var selectedBusinessVM : BusinessViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +55,26 @@ class ListBusinessViewController : UIViewController{
         
         
     }
+    
+    func getBusinessDetail(id: String){
+        self.selectedBusinessVM?.getBusinessDetailFromID(id: id, completion: { Businesses in
+            LoadingScreen.sharedInstance.showIndicator()
+            LoadingScreen.sharedInstance.hideIndicator()
+        })
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDetail"{
+            guard let newVC = segue.destination as? BusinessDetailViewController else {
+               return
+            }
+            
+            newVC.businesVM = self.selectedBusinessVM
+            
+            
+        }
+    }
 }
 
 
@@ -74,6 +96,24 @@ extension ListBusinessViewController : UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedIndex = indexPath.row
+        selectedBusinessVM = listBusinessVM.modelAt(indexPath.row)
+        //get data buat businesVM
+//        guard let idSelect = selectedBusinessVM?.item.id else {
+//            return
+//        }
+//        
+//        getBusinessDetail(id: idSelect)
+        
+        
+        
+        
+        
+        
+        self.performSegue(withIdentifier: "goToDetail", sender: ListBusinessViewController.self)
     }
     
     

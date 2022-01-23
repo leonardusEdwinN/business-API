@@ -56,13 +56,3 @@ class ListBusinessViewModel{
     
 }
 
-
-class BusinessViewModel {
-
-    let item: Businesses
-
-    init(business: Businesses) {
-        self.item = business
-    }
-}
-
