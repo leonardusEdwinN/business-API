@@ -153,21 +153,3 @@ extension BusinessDetailViewController : UITableViewDataSource, UITableViewDeleg
     
     
 }
-//
-//extension BusinessDetailViewController : UICollectionViewDelegate, UICollectionViewDataSource{
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        print("Collec \(businesVM?.item.categories?.count)")
-//        return businesVM?.item.categories?.count ?? 0
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "", for: indexPath) as! CategoryCollectionViewCell
-//
-//        cell.setupUI(category: businesVM?.item.categories?[indexPath.row].title ?? "Category")
-//        print(businesVM?.item.categories?[indexPath.row].title)
-//
-//        return UICollectionViewCell()
-//    }
-//
-//
-//}

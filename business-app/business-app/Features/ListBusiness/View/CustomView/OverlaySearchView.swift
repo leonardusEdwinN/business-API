@@ -33,7 +33,6 @@ class OverlaySearchView: UIViewController {
         }
         
         self.dismiss(animated: true) {
-            print("DISMISS AND GET")
             self.delegate?.delegateAndSearch(searchTerm: self.searchTerm)
         }
         

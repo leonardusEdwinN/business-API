@@ -12,17 +12,12 @@ struct Constants {
     struct Urls {
         
         static func urlForSearchLocation(keyword: String) -> URL {
-            print("URL = https://api.yelp.com/v3/businesses/search?\(keyword)")
             return URL(string: "https://api.yelp.com/v3/businesses/search?\(keyword)")!
         }
         
-//        static func urlForSearchBusinessName(keyword: String) -> URL {
-//            print("URL = https://api.yelp.com/v3/businesses/search?location=\(keyword)")
-//            return URL(string: "https://api.yelp.com/v3/businesses/search?location=\(keyword)")!
-//        }
         
         static func urlForGetID(id: String) -> URL {
-            print("URL = https://api.yelp.com/v3/businesses/\(id)")
+            
             
             return URL(string: "https://api.yelp.com/v3/businesses/\(id)")!
         }

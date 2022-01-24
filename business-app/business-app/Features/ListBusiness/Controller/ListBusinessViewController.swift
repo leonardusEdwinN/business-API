@@ -158,7 +158,6 @@ extension ListBusinessViewController: UIViewControllerTransitioningDelegate {
 
 extension ListBusinessViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("list : \(listBusinessVM.numberOfRows(section))")
         return listBusinessVM.numberOfRows(section)
 //        return 10
     }
@@ -181,6 +180,7 @@ extension ListBusinessViewController : UITableViewDelegate, UITableViewDataSourc
         selectedBusinessVM = listBusinessVM.modelAt(indexPath.row)
         self.performSegue(withIdentifier: "goToDetail", sender: ListBusinessViewController.self)
     }
+    
     
     //API doesn't have unlimited page
 //    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
