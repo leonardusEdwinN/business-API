@@ -12,35 +12,26 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct Location : Codable {
-	let city : String?
-	let country : String?
-	let address2 : String?
-	let address3 : String?
-	let state : String?
-	let address1 : String?
-	let zip_code : String?
+struct Open : Codable {
+	let is_overnight : Bool?
+	let start : String?
+	let end : String?
+	let day : Int?
 
 	enum CodingKeys: String, CodingKey {
 
-		case city = "city"
-		case country = "country"
-		case address2 = "address2"
-		case address3 = "address3"
-		case state = "state"
-		case address1 = "address1"
-		case zip_code = "zip_code"
+		case is_overnight = "is_overnight"
+		case start = "start"
+		case end = "end"
+		case day = "day"
 	}
 
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
-		city = try values.decodeIfPresent(String.self, forKey: .city)
-		country = try values.decodeIfPresent(String.self, forKey: .country)
-		address2 = try values.decodeIfPresent(String.self, forKey: .address2)
-		address3 = try values.decodeIfPresent(String.self, forKey: .address3)
-		state = try values.decodeIfPresent(String.self, forKey: .state)
-		address1 = try values.decodeIfPresent(String.self, forKey: .address1)
-		zip_code = try values.decodeIfPresent(String.self, forKey: .zip_code)
+		is_overnight = try values.decodeIfPresent(Bool.self, forKey: .is_overnight)
+		start = try values.decodeIfPresent(String.self, forKey: .start)
+		end = try values.decodeIfPresent(String.self, forKey: .end)
+		day = try values.decodeIfPresent(Int.self, forKey: .day)
 	}
 
 }

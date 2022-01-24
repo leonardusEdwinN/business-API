@@ -13,60 +13,66 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 import Foundation
 struct Businesses : Codable {
-	let rating : Double?
-	let price : String?
-    let phone : String?
-    let display_phone : String?
 	let id : String?
 	let alias : String?
-	let is_closed : Bool?
-	let categories : [Categories]?
-	let review_count : Int?
 	let name : String?
-	let url : String?
-	let coordinates : Coordinates?
 	let image_url : String?
+	let is_claimed : Bool?
+	let is_closed : Bool?
+	let url : String?
+	let phone : String?
+	let display_phone : String?
+	let review_count : Int?
+	let categories : [Categories]?
+	let rating : Double?
 	let location : Location?
-	let distance : Double?
+	let coordinates : Coordinates?
+	let photos : [String]?
+	let price : String?
+	let hours : [Hours]?
 	let transactions : [String]?
 
 	enum CodingKeys: String, CodingKey {
 
-		case rating = "rating"
-		case price = "price"
-        case phone = "phone"
-        case display_phone = "display_phone"
 		case id = "id"
 		case alias = "alias"
-		case is_closed = "is_closed"
-		case categories = "categories"
-		case review_count = "review_count"
 		case name = "name"
-		case url = "url"
-		case coordinates = "coordinates"
 		case image_url = "image_url"
+		case is_claimed = "is_claimed"
+		case is_closed = "is_closed"
+		case url = "url"
+		case phone = "phone"
+		case display_phone = "display_phone"
+		case review_count = "review_count"
+		case categories = "categories"
+		case rating = "rating"
 		case location = "location"
-		case distance = "distance"
+		case coordinates = "coordinates"
+		case photos = "photos"
+		case price = "price"
+		case hours = "hours"
 		case transactions = "transactions"
 	}
 
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
-		rating = try values.decodeIfPresent(Double.self, forKey: .rating)
-		price = try values.decodeIfPresent(String.self, forKey: .price)
-        phone = try values.decodeIfPresent(String.self, forKey: .phone)
-        display_phone = try values.decodeIfPresent(String.self, forKey: .display_phone)
 		id = try values.decodeIfPresent(String.self, forKey: .id)
 		alias = try values.decodeIfPresent(String.self, forKey: .alias)
-		is_closed = try values.decodeIfPresent(Bool.self, forKey: .is_closed)
-		categories = try values.decodeIfPresent([Categories].self, forKey: .categories)
-		review_count = try values.decodeIfPresent(Int.self, forKey: .review_count)
 		name = try values.decodeIfPresent(String.self, forKey: .name)
-		url = try values.decodeIfPresent(String.self, forKey: .url)
-		coordinates = try values.decodeIfPresent(Coordinates.self, forKey: .coordinates)
 		image_url = try values.decodeIfPresent(String.self, forKey: .image_url)
+		is_claimed = try values.decodeIfPresent(Bool.self, forKey: .is_claimed)
+		is_closed = try values.decodeIfPresent(Bool.self, forKey: .is_closed)
+		url = try values.decodeIfPresent(String.self, forKey: .url)
+		phone = try values.decodeIfPresent(String.self, forKey: .phone)
+		display_phone = try values.decodeIfPresent(String.self, forKey: .display_phone)
+		review_count = try values.decodeIfPresent(Int.self, forKey: .review_count)
+		categories = try values.decodeIfPresent([Categories].self, forKey: .categories)
+		rating = try values.decodeIfPresent(Double.self, forKey: .rating)
 		location = try values.decodeIfPresent(Location.self, forKey: .location)
-		distance = try values.decodeIfPresent(Double.self, forKey: .distance)
+		coordinates = try values.decodeIfPresent(Coordinates.self, forKey: .coordinates)
+		photos = try values.decodeIfPresent([String].self, forKey: .photos)
+		price = try values.decodeIfPresent(String.self, forKey: .price)
+		hours = try values.decodeIfPresent([Hours].self, forKey: .hours)
 		transactions = try values.decodeIfPresent([String].self, forKey: .transactions)
 	}
 
