@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,29 +19,122 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Npd-dq-aHS">
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evw-TG-awa">
+                                        <rect key="frame" x="244" y="10.5" width="75" height="29.5"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="MVK-NI-rdC"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Search">
+                                            <fontDescription key="titleFontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="13"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonSearchPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LS1-Fs-QKU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdp-Qz-ESG">
+                                        <rect key="frame" x="329" y="10" width="75" height="30"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="JoL-Sa-Hkh"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Filter">
+                                            <fontDescription key="titleFontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="13"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonFilterPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ihX-1h-HTu"/>
+                                            <action selector="buttonSearchPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="v8c-2i-9d0"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Of Business" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJj-6T-TDd">
+                                        <rect key="frame" x="15" y="15" width="214" height="20"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="HwF-S5-os3"/>
+                                    <constraint firstItem="evw-TG-awa" firstAttribute="leading" secondItem="cJj-6T-TDd" secondAttribute="trailing" constant="15" id="GqV-Qh-Dwl"/>
+                                    <constraint firstItem="cJj-6T-TDd" firstAttribute="centerY" secondItem="Npd-dq-aHS" secondAttribute="centerY" id="JFq-Sy-fw6"/>
+                                    <constraint firstAttribute="height" constant="50" id="RGm-4E-nDl"/>
+                                    <constraint firstAttribute="trailing" secondItem="bdp-Qz-ESG" secondAttribute="trailing" constant="10" id="ReZ-EH-Hag"/>
+                                    <constraint firstItem="evw-TG-awa" firstAttribute="centerY" secondItem="Npd-dq-aHS" secondAttribute="centerY" id="Vf9-GN-mLn"/>
+                                    <constraint firstItem="bdp-Qz-ESG" firstAttribute="leading" secondItem="evw-TG-awa" secondAttribute="trailing" constant="10" id="rnX-NJ-KHa"/>
+                                    <constraint firstItem="bdp-Qz-ESG" firstAttribute="centerY" secondItem="Npd-dq-aHS" secondAttribute="centerY" id="wbb-yY-Uzk"/>
+                                    <constraint firstItem="cJj-6T-TDd" firstAttribute="leading" secondItem="Npd-dq-aHS" secondAttribute="leading" constant="15" id="ySO-A6-idi"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3AN-rP-znV">
                                 <rect key="frame" x="0.0" y="99" width="414" height="763"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0A-4a-Srp">
+                                <rect key="frame" x="25" y="323" width="364" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data Here, Search Another Keywords. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsc-to-Jnj">
+                                        <rect key="frame" x="20" y="65" width="324" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Afc-Fc-7df">
+                                        <rect key="frame" x="157" y="129" width="50" height="48.5"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="YMb-2s-wfr"/>
+                                            <constraint firstAttribute="width" constant="50" id="aAn-kw-qkO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search another keyword on navigation bar" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvA-O6-hx6">
+                                        <rect key="frame" x="15" y="90.5" width="334" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="1PE-yn-Uxz"/>
+                                    <constraint firstItem="bvA-O6-hx6" firstAttribute="leading" secondItem="Q0A-4a-Srp" secondAttribute="leading" constant="15" id="7Ax-O1-eDa"/>
+                                    <constraint firstItem="Afc-Fc-7df" firstAttribute="centerX" secondItem="Q0A-4a-Srp" secondAttribute="centerX" id="DF4-du-GTy"/>
+                                    <constraint firstItem="bvA-O6-hx6" firstAttribute="top" secondItem="Wsc-to-Jnj" secondAttribute="bottom" constant="5" id="NAg-56-Zvd"/>
+                                    <constraint firstAttribute="trailing" secondItem="bvA-O6-hx6" secondAttribute="trailing" constant="15" id="Tgn-97-VRd"/>
+                                    <constraint firstItem="Wsc-to-Jnj" firstAttribute="centerX" secondItem="Q0A-4a-Srp" secondAttribute="centerX" id="Tnr-rB-ByY"/>
+                                    <constraint firstItem="Wsc-to-Jnj" firstAttribute="centerY" secondItem="Q0A-4a-Srp" secondAttribute="centerY" constant="-50" id="UEZ-ZO-Zoq"/>
+                                    <constraint firstItem="bvA-O6-hx6" firstAttribute="centerX" secondItem="Q0A-4a-Srp" secondAttribute="centerX" id="Xba-nK-ptV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wsc-to-Jnj" secondAttribute="trailing" constant="20" id="dI7-sf-Idc"/>
+                                    <constraint firstItem="Afc-Fc-7df" firstAttribute="top" secondItem="bvA-O6-hx6" secondAttribute="bottom" constant="20" id="pOS-6W-yqT"/>
+                                    <constraint firstItem="Wsc-to-Jnj" firstAttribute="leading" secondItem="Q0A-4a-Srp" secondAttribute="leading" constant="20" id="t2O-lf-lMX"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Q0A-4a-Srp" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="3cn-KA-eGU"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3AN-rP-znV" secondAttribute="trailing" id="Btj-lv-yin"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Npd-dq-aHS" secondAttribute="trailing" id="LD1-iU-Hri"/>
+                            <constraint firstItem="Q0A-4a-Srp" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="25" id="XiQ-BR-QfW"/>
+                            <constraint firstItem="Q0A-4a-Srp" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="d8F-HO-HTc"/>
                             <constraint firstItem="Npd-dq-aHS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dNW-jj-KKz"/>
                             <constraint firstItem="3AN-rP-znV" firstAttribute="top" secondItem="Npd-dq-aHS" secondAttribute="bottom" constant="5" id="eVL-9c-gau"/>
+                            <constraint firstAttribute="trailing" secondItem="Q0A-4a-Srp" secondAttribute="trailing" constant="25" id="gIC-zH-Uw2"/>
                             <constraint firstItem="Npd-dq-aHS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="oYW-0Q-PhT"/>
                             <constraint firstItem="3AN-rP-znV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="wfa-VE-6Ne"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="3AN-rP-znV" secondAttribute="bottom" id="xCC-Ye-UND"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonFilter" destination="bdp-Qz-ESG" id="MdS-wX-xUx"/>
+                        <outlet property="buttonSearch" destination="evw-TG-awa" id="U00-BG-HQs"/>
+                        <outlet property="emptyState" destination="Q0A-4a-Srp" id="ekh-aN-kwz"/>
                         <outlet property="listBusinessTableView" destination="3AN-rP-znV" id="PbI-22-Qun"/>
                         <outlet property="navigationView" destination="Npd-dq-aHS" id="PeK-g2-d1E"/>
                         <segue destination="Z69-IF-vlx" kind="show" identifier="goToDetail" id="Csm-xs-8EZ"/>
@@ -48,20 +142,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="135"/>
+            <point key="canvasLocation" x="137.68115942028987" y="134.59821428571428"/>
         </scene>
         <!--BusinessDetailVC-->
         <scene sceneID="j5K-Rk-16c">
             <objects>
+                <view contentMode="scaleToFill" id="o9X-JE-7Gy">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <viewLayoutGuide key="safeArea" id="ehG-mm-AKa"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="goD-8e-fSq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="BusinessDetail" referencedIdentifier="BusinessDetailVC" id="Z69-IF-vlx" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="5mZ-Qz-AoL"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="goD-8e-fSq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="740" y="-16"/>
         </scene>
     </scenes>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <namedColor name="AccentColor">
+            <color red="0.92156862745098034" green="0.23921568627450981" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

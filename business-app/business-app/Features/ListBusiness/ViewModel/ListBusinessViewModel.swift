@@ -19,11 +19,10 @@ class ListBusinessViewModel{
         return listBusinessResponse[index]
     }
     
+    
     func getBusinessFromKeyword(keyword : String,isNext: Bool, completion: @escaping ([BusinessViewModel]) -> Void) {
         
         if(listBusinessResponse.count > 0 && !isNext){
-            
-            //kalau ada data
             listBusinessResponse = []
         }
         

@@ -43,12 +43,20 @@ class BusinessDetailViewController : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setUINavigation()
         registerCell()
         
         if let id = businesVM?.item.id{
             getBusinessDetail(id: id)
         }
+    }
+    
+    func setUINavigation(){
+        navigationView.backgroundColor = UIColor.white
+        navigationView.layer.shadowColor = UIColor.gray.cgColor
+        navigationView.layer.shadowOffset = CGSize(width: 1, height: 1)
+        navigationView.layer.shadowRadius = 1
+        navigationView.layer.shadowOpacity = 5
     }
     
     func getBusinessDetail(id: String){

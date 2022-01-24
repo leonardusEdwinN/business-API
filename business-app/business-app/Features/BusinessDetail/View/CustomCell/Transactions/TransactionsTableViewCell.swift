@@ -12,12 +12,24 @@ class TransactionsTableViewCell: UITableViewCell {
     @IBOutlet weak var outerView: UIView!
     @IBOutlet weak var transactionsTableView: UITableView!
     @IBOutlet weak var transactionsLabel: UILabel!
+    @IBOutlet weak var transactionView: UIView!
     
     var transactions : [String] = []
     override func awakeFromNib() {
         super.awakeFromNib()
         registerCell()
+        checkEmptyState()
         // Initialization code
+    }
+    
+    func checkEmptyState(){
+        if(transactions.count == 0){
+            self.transactionsTableView.isHidden = true
+            self.transactionView.isHidden = false
+        }else{
+            self.transactionsTableView.isHidden = false
+            self.transactionView.isHidden = true
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,6 +45,7 @@ class TransactionsTableViewCell: UITableViewCell {
     func setupUI(transactions: [String]){
         self.transactions = transactions
         DispatchQueue.main.async {
+            self.checkEmptyState()
             self.transactionsTableView.reloadData()
         }
     }

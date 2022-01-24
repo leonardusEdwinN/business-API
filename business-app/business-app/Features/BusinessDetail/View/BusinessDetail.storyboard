@@ -270,7 +270,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vvi-iH-tAB">
-                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <rect key="frame" x="0.0" y="99" width="414" height="763"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -279,7 +279,7 @@
                         <constraints>
                             <constraint firstItem="PAE-d5-XNh" firstAttribute="leading" secondItem="UAK-U7-lNa" secondAttribute="leading" id="ITi-Bt-PEH"/>
                             <constraint firstItem="UAK-U7-lNa" firstAttribute="trailing" secondItem="vvi-iH-tAB" secondAttribute="trailing" id="Rvx-3j-9Sj"/>
-                            <constraint firstItem="vvi-iH-tAB" firstAttribute="top" secondItem="PAE-d5-XNh" secondAttribute="bottom" id="TXw-aV-buA"/>
+                            <constraint firstItem="vvi-iH-tAB" firstAttribute="top" secondItem="PAE-d5-XNh" secondAttribute="bottom" constant="5" id="TXw-aV-buA"/>
                             <constraint firstItem="UAK-U7-lNa" firstAttribute="bottom" secondItem="vvi-iH-tAB" secondAttribute="bottom" id="Tdt-Bd-rkw"/>
                             <constraint firstItem="UAK-U7-lNa" firstAttribute="trailing" secondItem="PAE-d5-XNh" secondAttribute="trailing" id="mrj-5n-DDY"/>
                             <constraint firstItem="vvi-iH-tAB" firstAttribute="leading" secondItem="UAK-U7-lNa" secondAttribute="leading" id="uA9-IZ-ZVb"/>
