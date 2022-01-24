@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverlaySearchView" customModule="business_app" customModuleProvider="target">
+            <connections>
+                <outlet property="businessNameLabel" destination="tsW-A8-OWl" id="MLI-Qh-icm"/>
+                <outlet property="businessNameTextfield" destination="27R-ob-fW1" id="on2-Mr-DLs"/>
+                <outlet property="buttonDone" destination="snF-wb-Zkl" id="1ec-Zl-W01"/>
+                <outlet property="labelSearch" destination="8kB-eX-TZw" id="VJ6-qn-mTm"/>
+                <outlet property="locationLabel" destination="hxK-dP-idN" id="o2I-qb-FkZ"/>
+                <outlet property="locationTextField" destination="2Zg-d8-VtA" id="r8F-ua-Z23"/>
+                <outlet property="searchTypeSegmentedControl" destination="SEC-bN-RfC" id="ny6-7Z-aDC"/>
+                <outlet property="stackViewCuisineType" destination="6RV-CG-YSa" id="9FX-VO-Sd2"/>
+                <outlet property="stackViewLocation" destination="UqS-Nm-c2p" id="g2V-Jb-yLT"/>
+                <outlet property="stackViewbusinessName" destination="5Q8-cc-fH9" id="TbA-df-jU7"/>
+                <outlet property="view" destination="iN0-l3-epB" id="mtn-zq-Dig"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kB-eX-TZw">
+                    <rect key="frame" x="15" y="15" width="70.5" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="9jt-9G-p0g"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snF-wb-Zkl">
+                    <rect key="frame" x="324" y="9.5" width="75" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="hdl-iu-33e"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                    <connections>
+                        <action selector="buttonDonePressed:" destination="-1" eventType="touchUpInside" id="67O-en-Dey"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cet-F6-ISX">
+                    <rect key="frame" x="15" y="105" width="384" height="100"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Q8-cc-fH9">
+                            <rect key="frame" x="0.0" y="0.0" width="384" height="23.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business Name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsW-A8-OWl">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="23.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="LcP-da-9BU"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="13"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Business Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="27R-ob-fW1">
+                                    <rect key="frame" x="100" y="0.0" width="284" height="23.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-Nm-c2p">
+                            <rect key="frame" x="0.0" y="38.5" width="384" height="23"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxK-dP-idN">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="23"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="EkS-D8-4Ik"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="13"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Address / City / Postal Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Zg-d8-VtA">
+                                    <rect key="frame" x="100" y="0.0" width="284" height="23"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RV-CG-YSa">
+                            <rect key="frame" x="0.0" y="76.5" width="384" height="23.5"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="YvK-3y-wUJ"/>
+                    </constraints>
+                </stackView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SEC-bN-RfC">
+                    <rect key="frame" x="15" y="55" width="384" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="R1E-hb-VbR"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Business Name"/>
+                        <segment title="Address / City"/>
+                        <segment title="Cuisine Type"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentControlPressed:" destination="-1" eventType="valueChanged" id="FbT-CJ-lyc"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="cet-F6-ISX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="06s-bG-Odv"/>
+                <constraint firstItem="cet-F6-ISX" firstAttribute="top" secondItem="SEC-bN-RfC" secondAttribute="bottom" constant="10" id="1Ed-ag-ybw"/>
+                <constraint firstItem="snF-wb-Zkl" firstAttribute="centerY" secondItem="8kB-eX-TZw" secondAttribute="centerY" id="49W-Cm-znG"/>
+                <constraint firstItem="SEC-bN-RfC" firstAttribute="top" secondItem="8kB-eX-TZw" secondAttribute="bottom" constant="20" id="ANv-Va-Vgg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="snF-wb-Zkl" secondAttribute="trailing" constant="15" id="C84-xI-FxM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SEC-bN-RfC" secondAttribute="trailing" constant="15" id="GZ9-um-d9h"/>
+                <constraint firstItem="8kB-eX-TZw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="HnJ-gI-0on"/>
+                <constraint firstItem="SEC-bN-RfC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="SKx-p4-DtI"/>
+                <constraint firstItem="8kB-eX-TZw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="jvZ-4S-xcz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cet-F6-ISX" secondAttribute="trailing" constant="15" id="mpe-EH-QGf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="131"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

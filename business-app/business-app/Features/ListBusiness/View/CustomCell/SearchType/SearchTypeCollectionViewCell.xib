@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchTypeCollectionViewCell" id="gTV-IL-0wX" customClass="SearchTypeCollectionViewCell" customModule="business_app" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="259" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="259" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l75-Br-zBL">
+                        <rect key="frame" x="5" y="5" width="249" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPv-xu-f5x">
+                                <rect key="frame" x="85" y="12" width="79.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lPv-xu-f5x" firstAttribute="centerX" secondItem="l75-Br-zBL" secondAttribute="centerX" id="EL0-w8-uDS"/>
+                            <constraint firstItem="lPv-xu-f5x" firstAttribute="centerY" secondItem="l75-Br-zBL" secondAttribute="centerY" id="ZV9-O4-liK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="l75-Br-zBL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="CJ6-Uy-O67"/>
+                <constraint firstItem="l75-Br-zBL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="I9m-K2-nNQ"/>
+                <constraint firstAttribute="bottom" secondItem="l75-Br-zBL" secondAttribute="bottom" constant="5" id="Itq-4c-81X"/>
+                <constraint firstAttribute="trailing" secondItem="l75-Br-zBL" secondAttribute="trailing" constant="5" id="YdZ-pg-yAs"/>
+            </constraints>
+            <size key="customSize" width="259" height="165"/>
+            <connections>
+                <outlet property="outerView" destination="l75-Br-zBL" id="kVG-YF-rdF"/>
+                <outlet property="searchTypeLabel" destination="lPv-xu-f5x" id="TEI-ke-BbX"/>
+            </connections>
+            <point key="canvasLocation" x="289.13043478260875" y="169.08482142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

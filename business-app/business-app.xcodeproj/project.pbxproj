@@ -53,6 +53,11 @@
 		1396B9A8279D90FC0005DC7D /* TransactionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1396B9A6279D90FC0005DC7D /* TransactionsTableViewCell.xib */; };
 		1396B9AB279D91660005DC7D /* TransactionItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1396B9A9279D91660005DC7D /* TransactionItemTableViewCell.swift */; };
 		1396B9AC279D91660005DC7D /* TransactionItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1396B9AA279D91660005DC7D /* TransactionItemTableViewCell.xib */; };
+		13DDE858279E5DF5006D53AC /* SearchTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DDE856279E5DF5006D53AC /* SearchTypeCollectionViewCell.swift */; };
+		13DDE859279E5DF5006D53AC /* SearchTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13DDE857279E5DF5006D53AC /* SearchTypeCollectionViewCell.xib */; };
+		13DDE85F279E7B13006D53AC /* OverlaySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DDE85E279E7B13006D53AC /* OverlaySearchView.swift */; };
+		13DDE861279E7DAB006D53AC /* PresentationSearchTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DDE860279E7DAB006D53AC /* PresentationSearchTypeViewController.swift */; };
+		13DDE865279E82BE006D53AC /* OverlaySearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13DDE864279E82BE006D53AC /* OverlaySearchView.xib */; };
 		9BE80D66307F0AB386A5AD57 /* Pods_business_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0BB1B89E285E875163BF33C /* Pods_business_app.framework */; };
 		DC5DB0FFFC28FAF71EBA5484 /* Pods_business_app_business_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68D8A75DBEB21C8C19C30D61 /* Pods_business_app_business_appUITests.framework */; };
 		EF2EA063D325A2CF75CF1613 /* Pods_business_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B458AE41CB9CBE25D1B5864 /* Pods_business_appTests.framework */; };
@@ -126,6 +131,11 @@
 		1396B9A6279D90FC0005DC7D /* TransactionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionsTableViewCell.xib; sourceTree = "<group>"; };
 		1396B9A9279D91660005DC7D /* TransactionItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionItemTableViewCell.swift; sourceTree = "<group>"; };
 		1396B9AA279D91660005DC7D /* TransactionItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionItemTableViewCell.xib; sourceTree = "<group>"; };
+		13DDE856279E5DF5006D53AC /* SearchTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		13DDE857279E5DF5006D53AC /* SearchTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTypeCollectionViewCell.xib; sourceTree = "<group>"; };
+		13DDE85E279E7B13006D53AC /* OverlaySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlaySearchView.swift; sourceTree = "<group>"; };
+		13DDE860279E7DAB006D53AC /* PresentationSearchTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationSearchTypeViewController.swift; sourceTree = "<group>"; };
+		13DDE864279E82BE006D53AC /* OverlaySearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlaySearchView.xib; sourceTree = "<group>"; };
 		37A4CF3FA853B536F7831399 /* Pods-business-appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-business-appTests.debug.xcconfig"; path = "Target Support Files/Pods-business-appTests/Pods-business-appTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A4AB3669745D5994939B18A /* Pods-business-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-business-app.release.xcconfig"; path = "Target Support Files/Pods-business-app/Pods-business-app.release.xcconfig"; sourceTree = "<group>"; };
 		4B458AE41CB9CBE25D1B5864 /* Pods_business_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_business_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +200,8 @@
 		1365C5F2279A5B1C00F1E4B8 /* business-app */ = {
 			isa = PBXGroup;
 			children = (
+				1365C63C279A634B00F1E4B8 /* Extensions */,
+				1365C637279A61DA00F1E4B8 /* Utils */,
 				1365C633279A614400F1E4B8 /* Services */,
 				1365C624279A5B7300F1E4B8 /* Features */,
 				1365C5F3279A5B1C00F1E4B8 /* AppDelegate.swift */,
@@ -249,6 +261,7 @@
 		1365C626279A5B8200F1E4B8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				13DDE85B279E7AC7006D53AC /* CustomView */,
 				1365C62D279A5E2300F1E4B8 /* CustomCell */,
 				1365C629279A5B9800F1E4B8 /* ListBusiness.storyboard */,
 			);
@@ -282,8 +295,8 @@
 		1365C62D279A5E2300F1E4B8 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
-				1365C62F279A613F00F1E4B8 /* ListBusinessTableViewCell.swift */,
-				1365C630279A613F00F1E4B8 /* ListBusinessTableViewCell.xib */,
+				13DDE85A279E5EB6006D53AC /* ListBusiness */,
+				13DDE855279E5DD5006D53AC /* SearchType */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -291,8 +304,6 @@
 		1365C633279A614400F1E4B8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				1365C63C279A634B00F1E4B8 /* Extensions */,
-				1365C637279A61DA00F1E4B8 /* Utils */,
 				1365C634279A614800F1E4B8 /* WebServices */,
 			);
 			path = Services;
@@ -421,6 +432,34 @@
 				1396B9AA279D91660005DC7D /* TransactionItemTableViewCell.xib */,
 			);
 			path = Transactions;
+			sourceTree = "<group>";
+		};
+		13DDE855279E5DD5006D53AC /* SearchType */ = {
+			isa = PBXGroup;
+			children = (
+				13DDE856279E5DF5006D53AC /* SearchTypeCollectionViewCell.swift */,
+				13DDE857279E5DF5006D53AC /* SearchTypeCollectionViewCell.xib */,
+			);
+			path = SearchType;
+			sourceTree = "<group>";
+		};
+		13DDE85A279E5EB6006D53AC /* ListBusiness */ = {
+			isa = PBXGroup;
+			children = (
+				1365C630279A613F00F1E4B8 /* ListBusinessTableViewCell.xib */,
+				1365C62F279A613F00F1E4B8 /* ListBusinessTableViewCell.swift */,
+			);
+			path = ListBusiness;
+			sourceTree = "<group>";
+		};
+		13DDE85B279E7AC7006D53AC /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				13DDE85E279E7B13006D53AC /* OverlaySearchView.swift */,
+				13DDE860279E7DAB006D53AC /* PresentationSearchTypeViewController.swift */,
+				13DDE864279E82BE006D53AC /* OverlaySearchView.xib */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		C6FD1CADF7997C96091AAFC5 /* Frameworks */ = {
@@ -560,12 +599,14 @@
 				1396B996279D74DA0005DC7D /* HoursItemTableViewCell.xib in Resources */,
 				1396B9A8279D90FC0005DC7D /* TransactionsTableViewCell.xib in Resources */,
 				1396B9AC279D91660005DC7D /* TransactionItemTableViewCell.xib in Resources */,
+				13DDE859279E5DF5006D53AC /* SearchTypeCollectionViewCell.xib in Resources */,
 				1396B9A3279D8D200005DC7D /* PhotoItemGalleryCollectionViewCell.xib in Resources */,
 				1396B983279BF5B90005DC7D /* CategoryCollectionViewCell.xib in Resources */,
 				1396B992279D71850005DC7D /* HoursOperationTableViewCell.xib in Resources */,
 				1396B98D279C04A20005DC7D /* CategoryTableViewCell.xib in Resources */,
 				1365C600279A5B1D00F1E4B8 /* LaunchScreen.storyboard in Resources */,
 				1396B987279BF8010005DC7D /* HeaderTableViewCell.xib in Resources */,
+				13DDE865279E82BE006D53AC /* OverlaySearchView.xib in Resources */,
 				1365C632279A613F00F1E4B8 /* ListBusinessTableViewCell.xib in Resources */,
 				1365C5FD279A5B1D00F1E4B8 /* Assets.xcassets in Resources */,
 				1365C62A279A5B9800F1E4B8 /* ListBusiness.storyboard in Resources */,
@@ -708,8 +749,10 @@
 				1365C636279A615800F1E4B8 /* WebService.swift in Sources */,
 				1396B99A279D8CED0005DC7D /* PhotoGalleryTableViewCell.swift in Sources */,
 				1396B982279BF5B90005DC7D /* CategoryCollectionViewCell.swift in Sources */,
+				13DDE858279E5DF5006D53AC /* SearchTypeCollectionViewCell.swift in Sources */,
 				1365C640279A6DE000F1E4B8 /* ListBusinessViewModel.swift in Sources */,
 				1396B972279BDB700005DC7D /* Hours.swift in Sources */,
+				13DDE85F279E7B13006D53AC /* OverlaySearchView.swift in Sources */,
 				1365C639279A620100F1E4B8 /* LoadingScreen.swift in Sources */,
 				1365C65C279A8BCC00F1E4B8 /* Center.swift in Sources */,
 				1365C631279A613F00F1E4B8 /* ListBusinessTableViewCell.swift in Sources */,
@@ -718,6 +761,7 @@
 				1396B969279BD3C30005DC7D /* BusinessDetailViewController.swift in Sources */,
 				1396B97A279BDBE80005DC7D /* BusinessViewModel.swift in Sources */,
 				1365C65A279A896D00F1E4B8 /* BusinesssResponses.swift in Sources */,
+				13DDE861279E7DAB006D53AC /* PresentationSearchTypeViewController.swift in Sources */,
 				1365C62C279A5BA900F1E4B8 /* ListBusinessViewController.swift in Sources */,
 				1365C658279A895400F1E4B8 /* Region.swift in Sources */,
 				1396B9A2279D8D200005DC7D /* PhotoItemGalleryCollectionViewCell.swift in Sources */,
